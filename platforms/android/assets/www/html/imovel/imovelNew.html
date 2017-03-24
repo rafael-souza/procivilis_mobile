@@ -1,0 +1,115 @@
+﻿<div data-role="page" id="imovelNew">
+
+    <div data-role="header" data-position="fixed" data-theme="c">
+        <a href="#" onclick="exibeAlertaAlteracao()" data-direction="reverse" data-icon="back" data-role="button" >Voltar</a>
+        <h1>Novo</h1>
+        <a href="#" onclick="gravarImovel()" data-icon="check" data-role="button" >Gravar</a>  
+    </div>
+
+    <div data-role="main" class="cw-responsive ui-responsive ui-content" data-theme="c">  
+
+        <div data-role="collapsibleset">
+
+			<div id="dados" data-role="collapsible" data-collapsed="false" data-content-theme="false" class="ui-body-d ui-content" data-collapsed-icon="home" data-expanded-icon="home">
+                <h3>Dados do Imóvel</h3>    
+                        
+                <div class="ui-block-c">    
+                    <label for="inscricaoImobiliaria">Inscrição Imobiliária:</label>
+                    <input id="inscricaoImobiliaria" type="text" data-clear-btn="true" class="cw-target">           
+                </div>          
+
+                <div class="ui-block-c">        
+                    <label for="proprietarioImovel">Proprietário:</label>
+                    <input id="proprietarioImovel" type="text" data-clear-btn="true" class="cw-target">                   
+                </div>  
+
+                <div class="ui-block-c">            
+                    <label for="enderecoImovel">Endereço:</label>
+                    <input id="enderecoImovel" type="text" data-clear-btn="true" class="cw-target">           
+                </div>          
+
+                <div class="ui-block-c">            
+                    <label for="numeroImovel">Nº:</label>
+                    <input id="numeroImovel" type="text" data-clear-btn="true" class="cw-target">               
+                </div>  
+
+                <div class="ui-block-c">            
+                    <label for="bairroImovel">Bairro:</label>
+                    <input id="bairroImovel" type="text" data-clear-btn="true" class="cw-target">               
+                </div>  
+
+                <div class="ui-block-c">            
+                    <label for="complementoImovel">Complemento:</label>
+                    <input id="complementoImovel" type="text" data-clear-btn="true" class="cw-target">           
+                </div>  
+
+                <div class="ui-block-c">            
+                    <label for="cepImovel">CEP:</label>
+                    <input id="cepImovel" type="text" data-clear-btn="true" class="cw-target">        
+                </div>  
+            </div>
+
+			<div id="fotos" data-role="collapsible" data-collapsed="true" data-content-theme="false"  class="ui-body-d ui-content" data-collapsed-icon="camera" data-expanded-icon="camera">            
+                <h3>Fotos</h3>
+
+                <div class="ui-block-c">                                
+                    <span id="img_fachada" onclick="manipulaFoto(this)"></span>                 
+                </div>  
+
+                <div class="ui-block-c">                                
+                    <span id="img_adicional1" onclick="manipulaFoto(this)"></span>                 
+                </div>  
+
+                <div class="ui-block-c">                                
+                    <span id="img_adicional2" onclick="manipulaFoto(this)"></span>                 
+                </div>    
+            </div>                        
+
+			<div id="caracte" data-role="collapsible" data-collapsed="true" data-content-theme="false" class="ui-body-d ui-content" data-collapsed-icon="bullets" data-expanded-icon="bullets">            
+                <h3>Características</h3>
+
+                <div id="caracteristicaNew"/></div>
+            </div>
+
+			<div id="georref" data-role="collapsible" data-collapsed="true" data-content-theme="false" class="ui-body-d ui-content" data-collapsed-icon="location" data-expanded-icon="location">            
+                <h3>Georreferenciamento</h3>
+
+                <div class="ui-block-c">
+                    <label for="latitude1">Latitude 1:</label>
+                    <input id="latitude1" type="text" disabled="disabled" class="cw-target"> 
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="longitude1">Longitude 1:</label>
+                    <input id="longitude1" type="text" disabled="disabled" class="cw-target">
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="latitude2">Latitude 2:</label>
+                    <input id="latitude2" type="text" disabled="disabled" class="cw-target">
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="longitude2">Longitude 2:</label>
+                    <input id="longitude2" type="text" disabled="disabled" class="cw-target">
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="latitude3">Latitude 3:</label>
+                    <input id="latitude3" type="text" disabled="disabled" class="cw-target">
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="longitude3">Longitude 3:</label>
+                    <input id="longitude3" type="text" disabled="disabled" class="cw-target">
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="c" style="text-align:center;"> 
+            <a href="#" onclick="georreferenciar()" data-icon="location" data-role="button">Georreferenciar</a>           
+        </div>        
+
+    </div>
+
+</div>

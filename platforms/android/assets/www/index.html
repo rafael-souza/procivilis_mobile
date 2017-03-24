@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pro Civilis - Gestão Municipal</title>    
+
+        <link rel="stylesheet" href="css/themes/cw-theme.min.css" />
+        <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="css/jquery/jquery.mobile.structure-1.4.5.min.css" />
+                       
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        
+        <script src="js/jquery/jquery-1.11.3.min.js"></script>        
+        <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/jquery/jquery.mobile.utils.js"></script>        
+                              
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXE35oxubhvJqX_yQ-fhrD3orvmxBvsHw"></script>        
+        <script type="text/javascript" src="js/md5/jquery.md5.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </head>
+    <body >         
+        <script src="js/atividade/atividadeController.js"></script>
+        <script src="js/atividade/atividadeModel.js"></script>        
+        <script src="js/imovel/imovelController.js"></script>
+        <script src="js/imovel/imovelModel.js"></script>        
+        <script src="js/usuario/usuarioModel.js"></script>
+        <script src="js/util.js"></script>    
+        <script src="js/controller.js"></script>
+        <script src="js/model.js"></script>
+        <script src="js/login.js"></script>        
+        <script src="js/sincronizarUtil.js"></script>
+        
+        <div id="loginPage" data-role="page" data-title="Autenticação" >
+
+            <div data-role="header" data-theme="c">
+                <h1>Autenticação</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">    
+
+                <form id="loginForm">
+
+                    <div id="logo" class="logo">
+                        <img src="img/logo.png" data-fullsrc="img/logo_full.png">
+                        <h1>Recadastramento Imobiliário - Mobile</h1>
+                    </div>
+                    
+                    <div data-role="fieldcontain" class="ui-hide-label input-login">
+                        <input type="text" id="username" value="" placeholder="Login" data-clear-btn="true"  data-theme="c" />
+                    </div>
+
+                    <div data-role="fieldcontain" class="ui-hide-label input-login">
+                        <input type="password" id="password" value="" placeholder="Senha" data-clear-btn="true"  data-theme="c"/>
+                    </div>
+
+                    
+                            <label class="ui-checkboxradio-label ui-corner-all ui-button ui-widget ui-button-inherit">
+                                <span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"></span>
+                                <span class="ui-checkboxradio-icon-space"> </span>
+                                <input type="checkbox" data-enhanced="true" name="remember-login" id="remember-login" class="ui-checkboxradio ui-helper-hidden-accessible">Lembrar-me
+                            </label>
+                    
+                                            
+                    <a href="#" onclick="realizaLogin()" data-theme="d" data-role="button" id="login">Login</a>                    
+                    <!--
+                    <a href="#" onclick="cargaInicial()" data-theme="d" data-role="button" id="cargaInicial">Carga de Dados Inicial</a>  -->
+
+                      <a href="#" onclick="limparBase()" data-theme="d" data-role="button" id="limparBase">Limpar Base Dados</a> 
+
+                </form>
+                
+            </div>
+			
+              <div data-role="footer" data-position="fixed" data-theme="c">
+                <h4>Pro Civilis - Gestão Municipal - V. 1.0.0</h4>
+            </div>
+   			
+        </div>
+    </body>
+</html>

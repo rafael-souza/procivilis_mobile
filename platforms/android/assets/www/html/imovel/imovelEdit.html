@@ -1,0 +1,124 @@
+﻿<div data-role="page" id="imovelEdit">
+
+    <div data-role="header" data-position="fixed" data-theme="c">
+        <a href="#" onclick="exibeAlertaAlteracao()" data-direction="reverse" data-icon="back" data-role="button" >Voltar</a>
+        <h4>Editar</h4>
+        <a href="#" onclick="atualizarImovel()" data-icon="check" data-role="button">Gravar</a>                
+    </div>
+
+    <div data-role="main" class="cw-responsive ui-responsive ui-content" data-theme="c">
+
+        <div data-role="collapsibleset">
+
+            <div id="dadosEdit" data-role="collapsible" data-collapsed="false" data-content-theme="false" class="ui-body-d ui-content" data-collapsed-icon="home" data-expanded-icon="home">
+                <h3>Dados do Imóvel</h3>             
+
+                <div class="ui-block-c">
+                    <label for="codigoImovelEdit">Código:</label>
+                    <input id="codigoImovelEdit" type="text" disabled="disabled">
+                </div>
+                
+                <div class="ui-block-c">
+                    <label for="inscricaoImobiliariaEdit">Inscrição Imobiliária:</label>
+                    <input id="inscricaoImobiliariaEdit" class="cw-target" type="text" data-clear-btn="true">    
+                </div>
+                
+                <div class="ui-block-c">
+                    <label for="proprietarioImovelEdit">Proprietário:</label>
+                    <input id="proprietarioImovelEdit" class="cw-target" type="text" data-clear-btn="true">        
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="enderecoImovelEdit">Endereço:</label>
+                    <input id="enderecoImovelEdit" type="text"  class="cw-target" data-clear-btn="true">
+                </div>
+                
+                <div class="ui-block-c">
+                    <label for="numeroImovelEdit">Nº:</label>
+                    <input id="numeroImovelEdit" type="text" class="cw-target" data-clear-btn="true">    
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="bairroImovelEdit">Bairro:</label>
+                    <input id="bairroImovelEdit" type="text" class="cw-target" data-clear-btn="true">    
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="complementoImovelEdit">Complemento:</label>
+                    <input id="complementoImovelEdit" type="text" class="cw-target" data-clear-btn="true">
+                </div>
+                
+                <div class="ui-block-c">
+                    <label for="cepImovelEdit">CEP:</label>
+                    <input id="cepImovelEdit" type="text" class="cw-target" data-clear-btn="true">        
+                </div>
+            </div>
+
+            <div id="fotosEdit" data-role="collapsible" data-collapsed="true" data-content-theme="false"  class="ui-body-d ui-content" data-collapsed-icon="camera" data-expanded-icon="camera">
+                <h3>Fotos</h3>
+                <div class="ui-block-c">            
+                    <span id="imgEdit_fachada" onclick="manipulaFoto(this)"></span>                 
+                </div>  
+
+                <div class="ui-block-c">            
+                    <span id="imgEdit_adicional1" onclick="manipulaFoto(this)"></span>                 
+                </div>  
+
+                <div class="ui-block-c">            
+                    <span id="imgEdit_adicional2" onclick="manipulaFoto(this)"></span>                 
+                </div>                 
+            </div>
+
+            <div id="caracteEdit" data-role="collapsible" data-collapsed="true" data-content-theme="false" class="ui-body-d ui-content" data-collapsed-icon="bullets" data-expanded-icon="bullets">
+                <h3>Características</h3>
+
+                <div id="caracteristicaEdit"/></div>
+            </div>
+
+        
+            <div id="georrefEdit" data-role="collapsible" data-collapsed="true" data-content-theme="false" class="ui-body-d ui-content" data-collapsed-icon="location" data-expanded-icon="location">
+                <h3>Georreferenciamento</h3>            
+
+                <div class="ui-block-c">
+                    <label for="latitude1Edit">Latitude 1:</label>
+                    <input id="latitude1Edit" type="text" disabled="disabled" class="cw-target">
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="longitude1Edit">Longitude 1:</label>
+                    <input id="longitude1Edit" type="text" disabled="disabled" class="cw-target">
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="latitude2Edit">Latitude 2:</label>
+                    <input id="latitude2Edit" type="text" disabled="disabled" class="cw-target">
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="longitude2Edit">Longitude 2:</label>
+                    <input id="longitude2Edit" type="text" disabled="disabled" class="cw-target">
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="latitude3Edit">Latitude 3:</label>
+                    <input id="latitude3Edit" type="text" disabled="disabled" class="cw-target">
+                </div>
+
+                <div class="ui-block-c">
+                    <label for="longitude3Edit">Longitude 3:</label>
+                    <input id="longitude3Edit" type="text" disabled="disabled" class="cw-target">
+                </div>
+            </div>
+        </div>            
+    </div>
+
+    <input id="idAtividade" type="text">
+    <input id="idImovelEdit" type="text">
+                    
+    <div data-role="footer" data-position="fixed" data-theme="c" style="text-align:center;">         
+        <a href="#" onclick="finalizarAtividade()" data-icon="action" data-role="button" data-theme="c">Finalizar</a>
+        <a href="#" onclick="georreferenciar()" data-icon="location" data-role="button" data-theme="c">Georreferenciar</a>
+        <a href="#" onclick="mostraNovaEdificacao()" data-icon="plus" data-role="button" data-theme="c">Nova Edificação</a>
+    </div>
+
+</div>
