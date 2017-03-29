@@ -3,7 +3,9 @@ var shortName = 'procivilis_mobile';
 var version = '1.0.0';
 var displayName = 'procivilis_mobile';
 var maxSize = 65535;
-var urlSync = 'http://52.67.3.119/gtmcidade/soa/service/mobile.';
+//var urlSync = 'http://52.67.3.119/gtmcidade/soa/service/mobile.';
+var urlSync = 'http://52.67.3.119/pmguaxupe/soa/service/mobile.';
+//var urlSync = 'http://10.0.0.101:8080/pmguaxupe/soa/service/mobile.';
 
 // iniciando transaÃ§Ã£o com o banco e criando as tabelas caso nÃ£o existam
 function iniciarBanco(){  
@@ -13,7 +15,6 @@ function iniciarBanco(){
     return;
   }
 
-  //alert('perai');
   // abrindo o banco de dados
   db = openDatabase(shortName, version, displayName, maxSize);
 
@@ -63,7 +64,8 @@ function iniciarBanco(){
           'latitude_ponto_dois varchar(20), '+
           'longitude_ponto_dois varchar(20), '+
           'latitude_ponto_tres varchar(20), '+
-          'longitude_ponto_tres varchar(20))', 
+          'longitude_ponto_tres varchar(20), ' +
+          'id_atividade bigint(10) )', 
         [],function(){},errorHandler);
     },errorHandler,function(){});  
 

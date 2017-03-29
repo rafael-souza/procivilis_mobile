@@ -248,10 +248,10 @@ function populateInscricaoDB(tx){
     for ( var i = 0; i < retornoRequest.length; i++ ) {                     
       var inscricao = retornoRequest[i];    
       tx.executeSql('INSERT INTO mob_inscricao_imobiliaria (id,codigo,inscricao_imobiliaria,proprietario, ' +
-            'endereco_logradouro,endereco_numero,endereco_bairro, endereco_cidade, endereco_complemento, endereco_cep) VALUES (?,?,?,?,?,?,?,?,?,?) ',
+            'endereco_logradouro,endereco_numero,endereco_bairro, endereco_cidade, endereco_complemento, endereco_cep, id_atividade) VALUES (?,?,?,?,?,?,?,?,?,?,?) ',
         [inscricao.id, inscricao.id, inscricao.inscricaoImobiliaria, inscricao.proprietarios,
         inscricao.nomeLogradouro, inscricao.endereco.numero, inscricao.nomeBairro, 
-        inscricao.nomeCidade,inscricao.endereco.complemento, inscricao.descricaoCep]);    
+        inscricao.nomeCidade,inscricao.endereco.complemento, inscricao.descricaoCep, inscricao.idAtividade]);    
     }
 }
 
@@ -513,7 +513,8 @@ function realizarEnvioDados(){
             "ins.latitude_ponto_dois, "+
             "ins.longitude_ponto_dois, "+
             "ins.latitude_ponto_tres, "+
-            "ins.longitude_ponto_tres "+
+            "ins.longitude_ponto_tres, "+
+            "ins.id_atividade "+
             "from mob_atividade atv inner join mob_inscricao_imobiliaria ins  " +
             "on (atv.inscricao_imobiliaria = ins.id)  " +
             "where  " +
@@ -646,6 +647,7 @@ function ajustaInscricaoParaEnviar(retornoEnvio){
         inscricao.longitudePontoDois = inscricaoImobiliaria.longitude_ponto_dois;
         inscricao.latitudePontoTres = inscricaoImobiliaria.latitude_ponto_tres;
         inscricao.longitudePontoTres = inscricaoImobiliaria.longitude_ponto_tres;
+        inscricao.idAtividade = inscricaoImobiliaria.id_atividade;
         // declarando o array de caracteristicas
         inscricao.inscricaoImobiliariaCaracteristica = [];
 
@@ -721,6 +723,8 @@ function ajustaInscricaoParaEnviar(retornoEnvio){
         }
 
         inscricao.usuarioColeta = window.localStorage.getItem("usuario_logado");
+        inscricao.fotoImportada = false;
+        inscricao.coletaCriada = false;
 
         // inserindo o novo objeto na lista
         listaInscricaoImobiliaria.push(inscricao);

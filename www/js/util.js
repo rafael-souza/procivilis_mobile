@@ -51,7 +51,7 @@ function getDataAtual(exibeSeparador, exibeHoras){
   var horas =  ("0" + fullDate.getHours()).slice(-2);
 
   if (exibeHoras){
-    return fullDate.getFullYear() + mes + dia  + horas;
+    return fullDate.getFullYear() + mes + dia;//  + horas;
   }
 
   if (exibeSeparador){
